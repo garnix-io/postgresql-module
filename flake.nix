@@ -47,7 +47,7 @@
                 (name: projectConfig: {
                   environment.systemPackages = [ postgres ];
 
-                  services.postgres = {
+                  services.postgresql = {
                     enable = true;
                     package = postgres;
                     settings.port = projectConfig.port;
