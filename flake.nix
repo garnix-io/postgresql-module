@@ -30,7 +30,7 @@
         };
 
         config =
-        let postgres = pkgs.postgresql17;
+        let postgres = pkgs.postgresql_17;
         in {
 
             devShells = builtins.mapAttrs
