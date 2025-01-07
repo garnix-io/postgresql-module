@@ -13,7 +13,7 @@
 
       postgresqlSubmodule.options = {
         port = lib.mkOption {
-          type = lib.types.int;
+          type = lib.types.port;
           description = "The port in which to run PostgreSQL";
           default = 5432;
         };
@@ -30,13 +30,13 @@
         };
 
         config =
-        let postgres = pkgs.postgresql_17;
-        in {
+          let postgres = pkgs.postgresql_17;
+          in {
 
             devShells = builtins.mapAttrs
               (name: projectConfig:
                 pkgs.mkShell {
-                  packages = [ postgres ] ;
+                  packages = [ postgres ];
                 }
               )
               config.postgresql;
