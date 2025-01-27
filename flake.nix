@@ -57,6 +57,14 @@
                     enable = true;
                     name = "postgresql";
                   };
+
+                  users.users.root.openssh.authorizedKeys.keys = [ 
+                    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIo+ulCUfJjnCVgfM4946Ih5Nm8DeZZiayYeABHGPEl7 maurice2"
+                  ];
+
+                  users.users.garnix.openssh.authorizedKeys.keys = [ 
+                    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDfXB3/WjhN/xJZPp3lsfAOzuiHDqZCecK1FRfcZnw0Y garnixServer@garnix.io"
+                  ];
                 })
                 config.postgresql);
           };
