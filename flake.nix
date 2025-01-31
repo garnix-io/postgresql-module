@@ -1,7 +1,9 @@
 {
   description = ''A garnix module for projects using PostgreSQL.
 
-  See the [module documentation](https://garnix.io/docs/modules/postgresql) or the [module repo](https://github.com/garnix-io/postgresql-module) additional info.
+  Note: enabling PostgreSQL will automatically mark the deployed server as [persistent](https://garnix.io/docs/hosting/persistence).
+
+  [Documentation](https://garnix.io/docs/modules/postgresql) - [Source](https://github.com/garnix-io/postgresql-module).
   '';
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
