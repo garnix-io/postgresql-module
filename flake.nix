@@ -1,5 +1,8 @@
 {
-  description = "A garnix module for postgreSQL";
+  description = ''A garnix module for projects using PostgreSQL.
+
+  See the [module documentation](https://garnix.io/docs/modules/postgresql) or the [module repo](https://github.com/garnix-io/postgresql-module) additional info.
+  '';
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
 
@@ -14,7 +17,7 @@
       postgresqlSubmodule.options = {
         port = lib.mkOption {
           type = lib.types.port;
-          description = "The port in which to run PostgreSQL";
+          description = "The port in which to run PostgreSQL.";
           default = 5432;
         };
 
@@ -25,7 +28,7 @@
         options = {
           postgresql = lib.mkOption {
             type = lib.types.attrsOf (lib.types.submodule postgresqlSubmodule);
-            description = "An attrset of postgresql databases";
+            description = "An attrset of PostgreSQL databases.";
           };
         };
 
