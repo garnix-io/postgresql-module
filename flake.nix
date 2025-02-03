@@ -2,7 +2,7 @@
   description = ''
     A garnix module for projects using PostgreSQL.
 
-    Note: enabling PostgreSQL will automatically mark the deployed server as [persistent](https://garnix.io/docs/hosting/persistence).
+    Note: Enabling PostgreSQL will automatically mark the deployed server as [persistent](https://garnix.io/docs/hosting/persistence).
 
     [Documentation](https://garnix.io/docs/modules/postgresql) - [Source](https://github.com/garnix-io/postgresql-module).
   '';
