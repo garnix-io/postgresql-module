@@ -58,6 +58,11 @@
                     package = postgres;
                     settings.port = projectConfig.port;
                   };
+
+                  garnix.server.persistence = {
+                    enable = true;
+                    name = "postgresql";
+                  };
                 })
                 config.postgresql);
           };
