@@ -20,7 +20,7 @@
       postgresqlSubmodule.options = {
         port = lib.mkOption {
           type = lib.types.port;
-          description = "The port in which to run PostgreSQL.";
+          description = "The port on which to run PostgreSQL.";
           default = 5432;
         };
 
