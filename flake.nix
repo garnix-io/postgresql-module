@@ -7,16 +7,9 @@
     [Documentation](https://garnix.io/docs/modules/postgresql) - [Source](https://github.com/garnix-io/postgresql-module).
   '';
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-
-  outputs =
-    { self
-    , nixpkgs
-    ,
-    }:
+  outputs = { self }: {
+    garnixModules.default = { pkgs, lib, config, ... }:
     let
-      lib = nixpkgs.lib;
-
       postgresqlSubmodule.options = {
         port = lib.mkOption {
           type = lib.types.port;
@@ -27,7 +20,6 @@
       };
     in
     {
-      garnixModules.default = { pkgs, config, ... }: {
         options = {
           postgresql = lib.mkOption {
             type = lib.types.attrsOf (lib.types.submodule postgresqlSubmodule);
@@ -69,4 +61,3 @@
       };
     };
 }
-
